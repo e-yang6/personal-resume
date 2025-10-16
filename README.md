@@ -1,3 +1,3 @@
 # Ethan Yang's Personal Resume
 
-![Resume](https://github.com/e-yang6/personal-resume/blob/main/Ethan_Yang_Resume.pdf?raw=1)
+[![Resume Preview](Resume_Thumbnail.png)](https://github.com/e-yang6/personal-resume/blob/main/Ethan_Yang_Resume.pdf)
