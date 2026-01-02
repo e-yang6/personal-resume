@@ -1,0 +1,201 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Ethan Yang} \\ \vspace{1pt}
+    \small 647-336-9608 $|$ \href{mailto:ethn.yang@mail.utoronto.ca}{\underline{ethn.yang@mail.utoronto.ca}} $|$ 
+    \href{https://linkedin.com/in/ey6}{\underline{linkedin.com/in/ey6}} $|$
+    \href{https://github.com/e-yang6}{\underline{github.com/e-yang6}} $|$
+    \href{https://ethanyang.dev/}{\underline{ethanyang.dev}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Toronto}{Toronto, ON}
+    {Bachelor of Applied Science in Electrical \& Computer Engineering + \textbf{PEY Co-op}}{Sep. 2025 -- May 2030}
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: C/C++, Python, Java, JavaScript, TypeScript, HTML/CSS, MATLAB} \\
+    \textbf{Frameworks}{: React, Node.js, Flask} \\
+    \textbf{Developer Tools}{: Git, VS Code, Visual Studio, PyCharm, Eclipse, Arduino} \\
+    \textbf{Libraries}{: Matplotlib, OpenCV}
+  }}
+\end{itemize}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+      {\textbf{QuantiFi (3rd Place, UTEFA QuantiFi Competition 2025)} $|$ \emph{Python}}{Nov. 2025}
+      \resumeItemListStart
+        \resumeItem{Developed a quantitative trading strategy for an algorithmic trading competition using Python}
+        \resumeItem{Backtested trading models on historical data to evaluate performance}
+        \resumeItem{Applied parameter optimization and risk analysis to improve strategy returns}
+  \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Stop! Don’t Go On (Finalist, GoOnHacks 2025)} $|$ \emph{React, Python, Flask, OpenCV, Arduino}}{Nov. 2025}
+      \resumeItemListStart
+        \resumeItem{Built a computer vision application to detect unproductive behavior and trigger automated alerts}
+        \resumeItem{Integrated real-time face tracking using OpenCV with hardware control via Arduino}
+        \resumeItem{Designed and served REST APIs using Flask to support frontend interactions}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+  {\textbf{binder.} $|$ \emph{React, TypeScript, Node.js}}{Oct. 2025}
+  \resumeItemListStart
+    \resumeItem{Built a swipe-style marketplace application for browsing secondhand deals with AI-assisted price recommendations}
+    \resumeItem{Implemented real-time web scraping of Kijiji listings with background processing}
+    \resumeItem{Integrated AI-powered negotiation coaching and price analysis features}
+    \resumeItem{Designed dynamic UI interactions using React and TypeScript for responsive cross-platform use}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+      {\textbf{Monte Carlo Simulation} $|$ \emph{C++, Python, Matplotlib}}{Oct. 2025}
+      \resumeItemListStart
+        \resumeItem{Implemented a Monte Carlo simulation in C++ to model stock price evolution using Geometric Brownian Motion}
+        \resumeItem{Generated and visualized simulated price paths and distributions using Matplotlib}
+        \resumeItem{Computed statistical metrics including mean and variance from simulation results}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Volleyball Coach}{Sep. 2021 -- Present}
+    {Toronto Thunderbolts Volleyball Club}{Markham, ON}
+    \resumeItemListStart
+      \resumeItem{Led and organized training sessions for youth athletes}
+      \resumeItem{Provided technical instruction and performance feedback}
+      \resumeItem{Collaborated with coaching staff to plan practices and tournaments}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Barista}{July 2025 -- Aug. 2025}
+    {Cotti Coffee}{Markham, ON}
+    \resumeItemListStart
+      \resumeItem{Delivered customer service in a fast-paced environment}
+      \resumeItem{Handled point-of-sale transactions accurately}
+      \resumeItem{Maintained cleanliness and operational standards}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}
