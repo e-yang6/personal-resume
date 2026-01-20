@@ -1,18 +1,9 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \setlist[itemize]{label=\textbullet}
 \usepackage[hidelinks]{hyperref}
@@ -23,7 +14,6 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -39,7 +29,6 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
@@ -48,9 +37,7 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{#1 \vspace{-2pt}}
-}
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
@@ -72,9 +59,6 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 
 %----------HEADING----------
@@ -84,7 +68,16 @@
   \href{mailto:ethn.yang@mail.utoronto.ca}{\underline{ethn.yang@mail.utoronto.ca}} $|$
   \href{https://linkedin.com/in/ey6}{\underline{linkedin.com/in/ey6}} $|$
   \href{https://github.com/e-yang6}{\underline{github.com/e-yang6}} $|$
-  \href{https://ethanyang.dev/}{\underline{ethanyang.dev}}
+  \href{https://ethanyang.dev}{\underline{ethanyang.dev}}
+\end{center}
+
+\vspace{-6pt}
+\begin{center}
+\small{
+Student computer engineer with strong foundations in systems programming, performance optimization, and hardware--software integration.
+Experienced in C/C++, Python, and Linux-based development across robotics, computer vision, and data-intensive systems.
+Interested in building reliable, performance-critical software for large-scale platforms.
+}
 \end{center}
 
 %-----------EDUCATION-----------
@@ -92,7 +85,10 @@
 \resumeSubHeadingListStart
   \resumeSubheading
     {University of Toronto}{Toronto, ON}
-    {Bachelor of Applied Science in Electrical \& Computer Engineering + PEY Co-op}{Sep. 2025 -- Expected May 2030}
+    {Bachelor of Applied Science in Computer Engineering + PEY Co-op}{Sep. 2025 -- Expected May 2030}
+    \resumeItemListStart
+      \resumeItem{\textbf{GPA:} 3.94 / 4.0}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
@@ -101,8 +97,8 @@
   \small{\item{
     \textbf{Languages}{: C/C++, Python, Java, JavaScript, TypeScript, HTML/CSS, MATLAB} \\
     \textbf{Frameworks}{: React, Node.js, Flask, ROS} \\
-    \textbf{Developer Tools}{: Git, Linux, Vite, VS Code, Visual Studio, PyCharm, Eclipse, Arduino} \\
-    \textbf{Libraries}{: NumPy, Matplotlib, OpenCV}
+    \textbf{Developer Tools}{: Git, Linux, Eclipse, IntelliJ, VS Code, Visual Studio, PyCharm, Arduino} \\
+    \textbf{Libraries}{: NumPy, OpenCV, Matplotlib}
   }}
 \end{itemize}
 
@@ -110,39 +106,37 @@
 \section{Projects}
 \resumeSubHeadingListStart
 
-  \resumeProjectHeading
-   {\href{https://github.com/e-yang6/hatseye}{\textbf{HATSEYE}} (Finalist, Top 6 of 144 — DeltaHacks XII) $|$ \emph{Python, Arduino, OpenCV, Flask}}{Jan. 2026}
+\resumeProjectHeading
+{\href{https://github.com/e-yang6/hatseye}{\textbf{HATSEYE}} — Finalist (Top 6 / 144), DeltaHacks 12 $|$ \emph{Python, Arduino, OpenCV, Flask}}{Jan. 2026}
 \resumeItemListStart
-  \resumeItem{Built an Arduino-based assistive hat with ultrasonic sensors and distance-based vibration}
-  \resumeItem{Developed a voice-activated AI-powered vision assistant to describe the user’s surroundings}
-  \resumeItem{Implemented obstacle detection and scene analysis using OpenCV}
-  \resumeItem{Added text-to-speech output and a simple Flask web interface for audio feedback and system status}
+  \resumeItem{Designed backend services and REST-style APIs to process real-time sensor and vision data under low-latency constraints}
+  \resumeItem{Implemented a Flask-based service layer exposing system state, vision outputs, and audio events with emphasis on reliability and clear service contracts}
+  \resumeItem{Developed and optimized OpenCV-based computer vision pipelines with attention to throughput, latency, and robustness}
+  \resumeItem{Integrated hardware-generated events from Arduino devices into software services, reinforcing event-driven and hardware--software co-design patterns}
 \resumeItemListEnd
 
-  \resumeProjectHeading
-    {\href{https://github.com/e-yang6/quantifi}{\textbf{QuantiFi}} (3rd Place, UTEFA QuantiFi Competition 2025) $|$ \emph{Python}}{Nov. 2025}
-  \resumeItemListStart
-    \resumeItem{Designed and implemented a dual moving average crossover trading strategy in Python}
-    \resumeItem{Backtested the strategy on market datasets and evaluated performance using returns and Sharpe ratio}
-    \resumeItem{Optimized strategy parameters via grid search to improve return stability}
-  \resumeItemListEnd
-  
-  \resumeProjectHeading
-    {\href{https://github.com/e-yang6/binder}{\textbf{binder.}} $|$ \emph{React, TypeScript, Node.js}}{Oct. 2025}
-  \resumeItemListStart
-    \resumeItem{Built a swipe-style marketplace application for browsing secondhand listings with price recommendation features}
-    \resumeItem{Implemented automated scraping of Kijiji listings and structured listing data for analysis}
-    \resumeItem{Developed price analysis and negotiation guidance features based on historical listing data}
-    \resumeItem{Designed responsive, interactive user interfaces using React and TypeScript}
-  \resumeItemListEnd
+\resumeProjectHeading
+{\href{https://github.com/e-yang6/quantifi}{\textbf{QuantiFi}} — 3rd Place, UTEFA QuantiFi Competition $|$ \emph{Python}}{Nov. 2025}
+\resumeItemListStart
+  \resumeItem{Implemented backend analytics modules for financial signal generation with emphasis on computational efficiency and modular design}
+  \resumeItem{Performed large-scale backtesting on historical datasets, validating algorithmic correctness and performance under realistic workloads}
+  \resumeItem{Produced structured performance metrics to support quantitative evaluation and iterative improvement}
+\resumeItemListEnd
 
-  \resumeProjectHeading
-    {\href{https://github.com/e-yang6/MonteCarloSimulation}{\textbf{Stock Price Simulation \& Risk Analysis}} $|$ \emph{C++, Python, Matplotlib}}{Oct. 2025}
-  \resumeItemListStart
-    \resumeItem{Implemented a Monte Carlo simulation in C++ to model stock price dynamics using Geometric Brownian Motion}
-    \resumeItem{Simulated large numbers of price paths and analyzed resulting distributions for statistical properties}
-    \resumeItem{Visualized simulation outcomes and evaluated model behavior using Matplotlib}
-  \resumeItemListEnd
+\resumeProjectHeading
+{\href{https://github.com/e-yang6/binder}{\textbf{binder.}} $|$ \emph{React, TypeScript, Node.js}}{Oct. 2025}
+\resumeItemListStart
+  \resumeItem{Built backend services to ingest, normalize, and serve structured data with attention to correctness, extensibility, and maintainability}
+  \resumeItem{Designed API endpoints supporting analytical workloads and recommendation logic with clearly defined interfaces}
+  \resumeItem{Collaborated across frontend and backend components using well-defined API contracts}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\href{https://github.com/e-yang6/MonteCarloSimulation}{\textbf{Stock Price Simulation \& Risk Analysis}} $|$ \emph{C++, Python, Matplotlib}}{Oct. 2025}
+\resumeItemListStart
+  \resumeItem{Built Monte Carlo simulation engines in C++ for large-scale numerical and statistical analysis}
+  \resumeItem{Evaluated correctness and performance using Python-based visualization and statistical validation techniques}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
@@ -150,24 +144,23 @@
 \section{Experience}
 \resumeSubHeadingListStart
 
-  \resumeSubheading
-    {Software Developer}{Sep. 2025 -- Present}
-    {Robotics for Space Exploration}{Toronto, ON}
-  \resumeItemListStart
-    \resumeItem{Developed robotics software in Python and C++ for student robotics competitions}
-    \resumeItem{Wrote unit tests for ROS-based robotics components on Linux using simulation tools}
-    \resumeItem{Collaborated with cross-functional teams to deliver mission-driven robotics software}
-    \resumeItem{Applied Git, debugging, and documentation best practices throughout development}
-  \resumeItemListEnd
+\resumeSubheading
+{Software Developer}{Sep. 2025 -- Present}
+{Robotics for Space Exploration}{Toronto, ON}
+\resumeItemListStart
+  \resumeItem{Developed and maintained modular C++ and Python software components on Linux systems with emphasis on correctness and maintainability}
+  \resumeItem{Worked with ROS-based distributed systems using message passing and service abstractions in simulated production-like environments}
+  \resumeItem{Implemented unit tests and debugging tools to improve system reliability, fault isolation, and deployment readiness}
+  \resumeItem{Collaborated in an agile engineering environment with strong emphasis on documentation and code quality}
+\resumeItemListEnd
 
-  \resumeSubheading
-    {Volleyball Coach}{Sep. 2021 -- Present}
-    {Toronto Thunderbolts Volleyball Club}{Markham, ON}
-  \resumeItemListStart
-    \resumeItem{Led structured training sessions for youth teams and managed practice schedules}
-    \resumeItem{Provided feedback and mentorship to support athlete development and performance}
-    \resumeItem{Coordinated with coaching staff to plan practices, drills, and competition strategies}
-  \resumeItemListEnd
+\resumeSubheading
+{Volleyball Coach}{Sep. 2021 -- Present}
+{Toronto Thunderbolts Volleyball Club}{Markham, ON}
+\resumeItemListStart
+  \resumeItem{Led and mentored youth athletes, demonstrating leadership, communication, and accountability}
+  \resumeItem{Planned and executed structured training programs while coordinating with coaches and organizational staff}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
