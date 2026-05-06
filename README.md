@@ -10,4 +10,4 @@
 </div>
 
 👉 **[Download Full Resume (PDF)](Ethan_Yang_Resume.pdf)** \
-👉 **[Template Used](https://github.com/jakegut/resume)**
+👉 **[Template Used](https://github.com/Erik-Cupsa/ResumeTemplate)**
