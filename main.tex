@@ -1,167 +1,213 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{verbatim}
 \usepackage{enumitem}
-\setlist[itemize]{label=\textbullet}
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks=true,linkcolor=linkblue,urlcolor=linkblue]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+\usepackage{carlito}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
+\usepackage[margin=1.4cm]{geometry}
+
+\definecolor{headingcolor}{HTML}{006B6B}
+\definecolor{linkblue}{HTML}{0645AD}
 
 \pagestyle{fancy}
 \fancyhf{}
+\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.15in}
+\addtolength{\textwidth}{0.3in}
 
 \urlstyle{same}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\raggedright\large\bfseries\color{headingcolor}
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{0pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-  \item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1 & #2 \\
-  \end{tabular*}\vspace{-7pt}
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}\vspace{0pt}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+
+
 \begin{document}
+\fontsize{10pt}{12pt}\selectfont
 
 %----------HEADING----------
 \begin{center}
-  \textbf{\Huge \scshape Ethan Yang} \\ \vspace{1pt}
-  \small 647-336-9608 $|$
-  \href{mailto:ethn.yang@mail.utoronto.ca}{\underline{ethn.yang@mail.utoronto.ca}} $|$
-  \href{https://linkedin.com/in/ey6}{\underline{linkedin.com/in/ey6}} $|$
-  \href{https://github.com/e-yang6}{\underline{github.com/e-yang6}} $|$
-  \href{https://ethanyang.dev}{\underline{ethanyang.dev}}
-\end{center}
-
-\vspace{-6pt}
-\begin{center}
-\small{
-Student computer engineer with strong foundations in systems programming, performance optimization, and hardware--software integration.
-Experienced in C/C++, Python, and Linux-based development across robotics, computer vision, and data-intensive systems.
-Interested in building reliable, performance-critical software for large-scale platforms.
-}
+    {\LARGE \textbf{Ethan Yang}} \\[2mm]
+    \footnotesize \raisebox{-0.1\height}
+    Software Engineer $|$ Boba Enjoyer $|$ Toronto, Ontario $|$
+    (647) 336-9608 $|$
+    \textcolor{linkblue}{\underline{ethn.yang@mail.utoronto.ca}} $|$
+    \textcolor{linkblue}{\underline{\href{https://www.linkedin.com/in/ey6/}{LinkedIn}}} $|$
+    \textcolor{linkblue}{\underline{\href{https://github.com/e-yang6}{GitHub}}} $|$
+    \textcolor{linkblue}{\underline{\href{https://ethanyang.dev/}{Portfolio}}}
+    \vspace{-8pt}
 \end{center}
 
 %-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
+\section{Education} \\[1mm]
+  \resumeSubHeadingListStart
   \resumeSubheading
-    {University of Toronto}{Toronto, ON}
-    {Bachelor of Applied Science in Computer Engineering + PEY Co-op}{Sep. 2025 -- Expected May 2030}
-    \resumeItemListStart
-      \resumeItem{\textbf{GPA:} 3.94 / 4.0}
-    \resumeItemListEnd
+  {University of Toronto}{Expected Graduation: May 2029}
+  {Bachelor of Applied Science in Computer Engineering
+  }{Toronto, Ontario}
 \resumeSubHeadingListEnd
+  \resumeItemListStart
+  \resumeItem {\textbf{GPA: 3.61}}
+        \vspace{-7pt}
+      \resumeItem {Relevant Coursework: Algorithms and Data Structures, Operating Systems, Computer Architecture, Software Engineering, Software Design and Communication, Introduction to Machine Learning}
+  \resumeItemListEnd
+    \vspace{-12pt}
 
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-  \small{\item{
-    \textbf{Languages}{: C/C++, Python, Java, JavaScript, TypeScript, HTML/CSS, MATLAB} \\
-    \textbf{Frameworks}{: React, Node.js, Flask, ROS} \\
-    \textbf{Developer Tools}{: Git, Linux, Eclipse, IntelliJ, VS Code, Visual Studio, PyCharm, Arduino} \\
-    \textbf{Libraries}{: NumPy, OpenCV, Matplotlib}
-  }}
-\end{itemize}
+%-----------Experience---------------
+\section{Work Experience}
+    \resumeSubHeadingListStart
+                \resumeSubheading{Sun Life Financial}{May 2026 -- Present}{API Development Intern}{Toronto, Ontario}
+                \resumeItemListStart
+                    \resumeItem{Eliminated manual service setup for \textbf{8 engineering teams}, cutting a \textbf{2-day} process to under \textbf{3 hours}, by single-handedly designing and shipping a \textbf{Java} platform that automates \textbf{Kafka Streams} and \textbf{API} infrastructure}
+                    \resumeItem{Automated a core piece of the code review process, cutting manual PR review time by an estimated \textbf{50\%}, by building and deploying an \textbf{AI} agent with \textbf{AWS Bedrock} that flags documentation violations and drafts fix explanations}
+                    \resumeItem{Cut documentation lookup time by over \textbf{80\%} by building a \textbf{Python} and \textbf{Node.js} pipeline to migrate \textbf{1,200+} legacy pages into structured, searchable \textbf{Markdown}}
+                    \resumeItemListEnd
+                \resumeSubheading{MannLab}{January 2026 -- Present}{Undergraduate Researcher}{Toronto, Ontario}
+                \resumeItemListStart
+                    \resumeItem{Surfaced unsafe failure modes across \textbf{9,144 EEG data samples} by auditing \textbf{8 machine learning techniques} and building a \textbf{3-step diagnostic tool} in \textbf{PyTorch} to trace root causes}
+                    \resumeItem{Co-authored \textbf{3 research papers} under review at \textbf{IEEE ISMAR} and \textbf{NeurIPS} by applying signal-processing and \textbf{ML} methods to \textbf{EEG} biofeedback and consumer BCI safety research under Professor Steve Mann}
+                    \resumeItem{Built a real-time \textbf{XR} application in \textbf{Unity} targeting a \textbf{30\%} reduction in cocaine cravings by processing streaming \textbf{EEG} signal data through a \textbf{PyTorch} inference pipeline}
+                    \resumeItemListEnd
+                \resumeSubheading{Robotics for Space Exploration}{September 2025 -- April 2026}{Software Developer}{Toronto, Ontario}
+                \resumeItemListStart
+                    \resumeItem{Cut unsafe arm command errors by \textbf{40\%} by debugging an intermittent real-time communication fault and writing fault-tolerant \textbf{ROS2} nodes in \textbf{Python} on \textbf{Linux}, backed by unit tests}
+                    \resumeItem{Scored \textbf{93.96\%} on the System Acceptance Review at the University Rover Challenge (\textbf{20+ points} above cutoff) by building and testing a \textbf{PyQt} rover control GUI integrated with \textbf{ROS2}, validated against \textbf{C++} simulation environments}
+                    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \vspace{-12pt}
 
 %-----------PROJECTS-----------
 \section{Projects}
-\resumeSubHeadingListStart
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
 
-\resumeProjectHeading
-{\href{https://github.com/e-yang6/hatseye}{\textbf{HATSEYE}} — Finalist (Top 6 / 144), DeltaHacks 12 $|$ \emph{Python, Arduino, OpenCV, Flask}}{Jan. 2026}
-\resumeItemListStart
-  \resumeItem{Designed backend services and REST-style APIs to process real-time sensor and vision data under low-latency constraints}
-  \resumeItem{Implemented a Flask-based service layer exposing system state, vision outputs, and audio events with emphasis on reliability and clear service contracts}
-  \resumeItem{Developed and optimized OpenCV-based computer vision pipelines with attention to throughput, latency, and robustness}
-  \resumeItem{Integrated hardware-generated events from Arduino devices into software services, reinforcing event-driven and hardware--software co-design patterns}
-\resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Sinatra} $|$ \emph{\textcolor{linkblue}{\underline{\href{https://github.com/e-yang6/sinatra}{Source Code}}}} $|$ \emph{\textcolor{linkblue}{\underline{\href{https://www.youtube.com/watch?v=t20K-fD03lY}{Demo}}}}}{React $|$ TypeScript $|$ FastAPI $|$ Python}
+        \\[5mm]
+        \resumeItemListStart
+            \resumeItem{Attracted a \textbf{40+ user waitlist} by independently designing and building a browser-based \textbf{DAW} that transcribes vocals to \textbf{MIDI} via ML, with AI chord generation and \textbf{Three.js} export}
+            \resumeItem{Eliminated install friction entirely by architecting a full in-browser audio pipeline from mic input through multi-track \textbf{MIDI} rendering to \textbf{FFmpeg} export}
+        \resumeItemListEnd
+    \vspace{-20pt}
 
-\resumeProjectHeading
-{\href{https://github.com/e-yang6/quantifi}{\textbf{QuantiFi}} — 3rd Place, UTEFA QuantiFi Competition $|$ \emph{Python}}{Nov. 2025}
-\resumeItemListStart
-  \resumeItem{Implemented backend analytics modules for financial signal generation with emphasis on computational efficiency and modular design}
-  \resumeItem{Performed large-scale backtesting on historical datasets, validating algorithmic correctness and performance under realistic workloads}
-  \resumeItem{Produced structured performance metrics to support quantitative evaluation and iterative improvement}
-\resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Finance Digitization} $|$ \emph{\textcolor{linkblue}{\underline{\href{https://github.com/e-yang6/finance-digitisation-esp}{Source Code}}}}}{Next.js $|$ TypeScript $|$ AWS $|$ PostgreSQL}
+        \\[5mm]
+        \resumeItemListStart
+            \resumeItem{Cut cheque approval time from \textbf{3 days to 1 hour} for \textbf{300+ UofT EngSoc users} and \textbf{100+ clubs} by building a production system with \textbf{OCR}-based receipt parsing and a dual e-signature workflow}
+        \resumeItemListEnd
+    \vspace{-20pt}
 
-\resumeProjectHeading
-{\href{https://github.com/e-yang6/binder}{\textbf{binder.}} $|$ \emph{React, TypeScript, Node.js}}{Oct. 2025}
-\resumeItemListStart
-  \resumeItem{Built backend services to ingest, normalize, and serve structured data with attention to correctness, extensibility, and maintainability}
-  \resumeItem{Designed API endpoints supporting analytical workloads and recommendation logic with clearly defined interfaces}
-  \resumeItem{Collaborated across frontend and backend components using well-defined API contracts}
-\resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Lock Block - HackHive 2026 Winner} $|$ \emph{\textcolor{linkblue}{\underline{\href{https://github.com/e-yang6/lockblock}{Source Code}}}} $|$ \emph{\textcolor{linkblue}{\underline{\href{https://www.youtube.com/watch?v=1hwgS66tB9k}{Demo}}}}}{Python $|$ Flask $|$ OpenCV $|$ Arduino}
+        \\[5mm]
+        \resumeItemListStart
+            \resumeItem{Won HackHive 2026 by building a smart lock combining \textbf{OpenCV} face recognition with \textbf{Ed25519} cryptographic wallet authentication and automated alerting}
+            \resumeItem{Prevented physical bypass attacks by designing a fault-tolerant \textbf{Arduino} servo locking mechanism synced to the vision backend via \textbf{PySerial}}
+        \resumeItemListEnd
+    \vspace{-20pt}
 
-\resumeProjectHeading
-{\href{https://github.com/e-yang6/MonteCarloSimulation}{\textbf{Stock Price Simulation \& Risk Analysis}} $|$ \emph{C++, Python, Matplotlib}}{Oct. 2025}
-\resumeItemListStart
-  \resumeItem{Built Monte Carlo simulation engines in C++ for large-scale numerical and statistical analysis}
-  \resumeItem{Evaluated correctness and performance using Python-based visualization and statistical validation techniques}
-\resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{HATSEYE - DeltaHacks 12 Finalist} $|$ \emph{\textcolor{linkblue}{\underline{\href{https://github.com/e-yang6/hatseye}{Source Code}}}} $|$ \emph{\textcolor{linkblue}{\underline{\href{https://www.youtube.com/watch?v=xQ6gp2Mjr_0}{Demo}}}}}{Python $|$ Flask $|$ OpenCV $|$ Arduino}
+        \\[5mm]
+        \resumeItemListStart
+            \resumeItem{Placed \textbf{top 6 of 144 teams} by building a dual-pipeline voice-activated AI vision assistant running real-time camera analysis and TTS alongside ultrasonic haptic feedback}
+        \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+    \resumeSubHeadingListEnd
+    \vspace{-16pt}
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-\resumeSubHeadingListStart
+%-----------LEADERSHIP-----------
+\section{Leadership}
+    \resumeSubHeadingListStart
+        \resumeSubheading{UofTHacks}{March 2026 -- Present}{Event Logistics Executive}{Toronto, Ontario}
+        \resumeItemListStart
+            \resumeItem{Secured a sponsor partnership for UofTHacks 14 by coordinating outreach to external clubs and companies while managing event logistics, guest scheduling, and room allocations}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \vspace{-12pt}
 
-\resumeSubheading
-{Software Developer}{Sep. 2025 -- Present}
-{Robotics for Space Exploration}{Toronto, ON}
-\resumeItemListStart
-  \resumeItem{Developed and maintained modular C++ and Python software components on Linux systems with emphasis on correctness and maintainability}
-  \resumeItem{Worked with ROS-based distributed systems using message passing and service abstractions in simulated production-like environments}
-  \resumeItem{Implemented unit tests and debugging tools to improve system reliability, fault isolation, and deployment readiness}
-  \resumeItem{Collaborated in an agile engineering environment with strong emphasis on documentation and code quality}
-\resumeItemListEnd
-
-\resumeSubheading
-{Volleyball Coach}{Sep. 2021 -- Present}
-{Toronto Thunderbolts Volleyball Club}{Markham, ON}
-\resumeItemListStart
-  \resumeItem{Led and mentored youth athletes, demonstrating leadership, communication, and accountability}
-  \resumeItem{Planned and executed structured training programs while coordinating with coaches and organizational staff}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python, TypeScript, JavaScript, C++, C, SQL, HTML5, CSS} \\[1mm]
+     \textbf{Libraries/Frameworks}{: React, Next.js, Node.js, FastAPI, Flask, PyTorch, OpenCV, Three.js, PyQt, Tailwind CSS, Unity} \\[1mm]
+     \textbf{Developer Tools}{: Git, GitHub Actions, Bitbucket Pipelines, Jenkins, Docker, Linux/Unix, AWS (ECS, S3, Bedrock), Apache Kafka, Apache Flink, ROS2, Postman, Jira, Arduino, PySerial, Vite} \\ [1mm]
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+ \vspace{3pt}
+\vspace{10pt}
+\vspace{-15pt}
 
 \end{document}
