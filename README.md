@@ -1,6 +1,6 @@
 # Ethan Yang — Resume
 
-[![Resume Preview](https://github.com/e-yang6/personal-resume/blob/main/Ethan_Yang_Resume_Preview.jpg)](https://github.com/e-yang6/personal-resume/blob/main/Ethan_Yang_Resume.pdf)
+[![Resume Preview](https://github.com/e-yang6/personal-resume/blob/main/Ethan_Yang_Resume_Prev.jpg)](https://github.com/e-yang6/personal-resume/blob/main/Ethan_Yang_Resume.pdf)
 
 <div align="center">
 
